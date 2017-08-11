@@ -6,5 +6,14 @@
 </head>
 <body>
     <h1>Bem-vindo ao projeto ConnectedIn</h1>
+    {% if perfis %}
+        <ul>
+            {% for perfil in perfis %}
+            <li><a href="/perfis/{{perfil.id}}">{{perfil.nome}} / {{perfil.email}}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Nenhum perfil foi encontrado.</h2>
+    {% endif %}
 </body>
 </html>

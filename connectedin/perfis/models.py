@@ -8,8 +8,10 @@ from django.db import models
 # usar python manage.py shell para abrir um console onde pode-se instanciar e
 # fazer operações como salvar dados nesta classe
 
-#pode-se usar o comando python manage.py sqlmigrate [nome do app (aqui é perfis)] e o nome da migrate
-#iso vai retornar os comandos SQL utilizados para rodar essa migração.
+# pode-se usar o comando python manage.py sqlmigrate [nome do app (aqui é perfis)] e o nome da migrate
+# iso vai retornar os comandos SQL utilizados para rodar essa migração.
+# usando o shell também é possível criar diretamente um valor no banco para os models utilizando:
+# perfil = Perfil.objects.create(nome='Steve', email='steve@minecraft.com', telefone='n/a', nome_empresa='Alura')
 
 class Perfil(models.Model):
     nome = models.CharField(max_length=255, null=False)
