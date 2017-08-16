@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>ConnectedIn</title>
-</head>
-<body>
-    <h1>Perfis - Exibição</h1>
-    <h2>{{perfil.nome}}</h2>
-    <h3><a href="{% url 'convidar' perfil.id %}">Convidar</a></h3>
-</body>
-</html>
+{% extends "base.html" %}
+{% block body %}
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Perfis - Exibição</h1>
+        <h2>{{perfil.nome}}</h2>
+
+        <address>
+            <strong>{{ perfil.empresa }}</strong><br />
+            <abbr title="Telefone">Telefone: {{perfil.telefone}}</abbr><br />
+            <a href="mailto: {{ perfil.email }}">{{perfil.email}}</a>
+        </address>
+        <h3><a href="{% url 'convidar' perfil.id %}">Convidar</a></h3>
+    </div>
+</div>
+{% endblock %}
