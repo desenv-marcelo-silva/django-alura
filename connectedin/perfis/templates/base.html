@@ -12,7 +12,7 @@
     <div class="container">
         <div class="header">
             <ul class="nav nav-pills pull-right">
-                <li><a href="{% url 'index' %}" class="href">Nome</a></li>
+                <li><a href="{% url 'index' %}" class="href">{{perfil_logado.nome}}</a></li>
                 <li><a href="/logout/" class="href">Logout</a></li>
             </ul>
             <h3 class="text-muted">
